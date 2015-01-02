@@ -13,3 +13,17 @@ puts "a\nc#{name} d"
 
 puts 'a\nc\nd'
 # => a\nc\nd
+
+
+#string format
+
+# 把name这个变量映射进入，类似于php中直接在字符串中$name
+puts "Hi,#{name}!"
+
+# 映射一个哈希表(键值对)
+user = {
+    'name' => 'jayin',
+    1 =>'id 1',
+    '1' => 'string 1'
+}
+puts "Hello,#{user['name']}!"
