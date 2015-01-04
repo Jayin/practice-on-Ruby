@@ -7,6 +7,11 @@ class Dog
     def speak 
         puts 'wow wow'
     end
+
+    #定义类方法
+    def Dog.say (word='WOW WOW!')
+        puts "dog say #{word}"
+    end
 end
 
 # create instance
@@ -15,3 +20,6 @@ my_dog.speak
 
 # or this:
 Dog.new.speak
+
+#class method
+Dog.say
