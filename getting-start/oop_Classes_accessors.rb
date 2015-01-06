@@ -11,14 +11,23 @@
 class Fruit
     #自动对属性name和id的getter、setter
     attr_accessor :name, :id
+
+    @@id = 123;
     #执行new的时候，就会调用这个方法
     def initialize (name,id=0)#支持默认参数
         @name = name
         @id = id
     end
+
+    #无效，相当于pyhton中的__str__
+    def inspect
+        "kind of Fruit"
+    end
 end
 
 f = Fruit.new('apple1')
+
+puts f
 
 f.name = 'Ruby'
 puts f.name
